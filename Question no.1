@@ -1,0 +1,26 @@
+/*1. Write a program to find the number of vowels in each of the 5 strings stored in two
+dimensional arrays, taken from the user.*/
+
+#include<stdio.h>
+int main()
+{
+char str[3][20];
+int vowels=0; // for counting the no. of vowels
+for(int i=0;i<3;i++){
+   printf("Enter the %d string :",i+1);
+      fgets(str[i],20,stdin);
+}
+// logic to find no. of vowels in a string
+for(int i=0;i<3;i++){
+  
+   for(int j=0;str[i][j]!='\0';j++){
+      if(str[i][j]=='A' || str[i][j]=='E' || str[i][j]=='I' || str[i][j]=='U' || str[i][j]=='O' || str[i][j]=='a' || str[i][j]=='e' || str[i][j]=='i' || str[i][j]=='o' || str[i][j]=='u'){
+         vowels++;
+      }
+   }
+   printf("%s string has %d vowels\n",str[i],vowels);
+   vowels=0;
+}
+
+return 0;
+}
