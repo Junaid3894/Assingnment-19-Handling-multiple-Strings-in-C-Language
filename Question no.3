@@ -1,0 +1,22 @@
+/*3. Write a program to read and display a 2D array of strings in C language.*/
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int size;
+printf("How many string you want to enter :");
+scanf("%d",&size);  
+char str[size][20];
+// input string from user
+fflush stdin;
+for(int i=0;i<size;i++){
+   printf("Enter the %d stirng :",i+1);
+   gets(str[i]);
+}
+for(int i=0;i<size;i++){
+   printf("%s\n",str[i]);
+}
+
+return 0;
+}
