@@ -1,0 +1,29 @@
+/*4. Write a program to search a string in the list of strings.*/
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int size;
+int search_str[20];
+int index=0;
+printf("Enter the size of the array :");
+scanf("%d",&size);
+fflush stdin;
+char str[size][20];
+for(int i=0;i<size;i++){
+    printf("Enter %d string :",i+1);
+    gets(str[i]);
+}
+printf("Enter the string which you want see :");
+gets(search_str);
+// Logic to search a string in list of string 
+for(int i=0;i<size;i++){
+    index++;
+    if(strcmp(search_str,str[i])==0){
+        printf("Your string has on %d number",index);
+    }
+}
+
+return 0;
+}
