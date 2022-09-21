@@ -1,0 +1,33 @@
+/*6. Write a program to print the strings which are palindrome in the list of strings.*/
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int size;
+printf("Enter the size of array :");
+scanf("%d",&size);
+fflush stdin;
+char str[size][20];
+int length=0;
+// Taking string strings from user
+for(int i=0;i<size;i++){
+    printf("Enter %d string :",i+1);
+    gets(str[i]);
+}
+// Logic to find string is palindrome or not 
+for(int i=0;i<2;i++){
+    length=strlen(str[i]);
+    int j;
+    for(j=0;j<length;j++){
+        if(str[i][j]!=str[i][length-1-j]){
+            break;
+        }
+    }
+    if(length==j){
+        printf(" String palindrome :%s\n",str[i]);
+    }
+}
+
+return 0;
+}
