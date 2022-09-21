@@ -1,0 +1,27 @@
+/*5. Suppose we have a list of email addresses, check whether all email addresses have
+‘@’ in it. Print the odd email out.*/
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int size;
+int index=0;
+// taking input user to how many email address you want 
+printf("Enter the size of the array :");
+scanf("%d",&size);
+fflush stdin;
+char str[size][20];
+for(int i=0;i<size;i++){
+    printf("Enter %d email address :",i+1);
+    gets(str[i]);
+}
+// Logic to find all the odd email addresses which does not have @ in it 
+for(int i=0;i<size;i++){
+    if(strchr(str[i],'@')==0){
+        printf("%s\n",&str[i]);
+    }
+}
+    
+return 0;
+}
