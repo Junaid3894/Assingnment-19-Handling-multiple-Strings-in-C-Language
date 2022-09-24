@@ -1,0 +1,25 @@
+/*10. Create an authentication system. It should be menu driven.*/
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+char str[3][2][20]={"Junaid3894","123","Mysirg","3343","Prateeksir","123"};
+char username[20];
+char password[20];
+int flag=0;
+printf("Enter your username :");
+gets(username);
+printf("Enter your password :");
+gets(password);
+for(int i=0;i<3;i++){
+    if(strcmp(str[i][0],username)==0  && strcmp(str[i][1],password)==0  ){
+        printf("Welcome Back %s",username);
+        flag=1;
+        }
+}
+if(flag==0){
+    printf("Please check your username or password once again ");
+}
+return 0;
+}
